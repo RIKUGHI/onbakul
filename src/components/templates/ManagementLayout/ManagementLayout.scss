@@ -1,0 +1,371 @@
+.mng-product-container{
+  // border: 1px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .head-product{
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .title{
+      font-size: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      color: var(--mainColor);
+    }
+  
+    .wrapper-action{
+      // border: 1px solid blue;
+      display: flex;
+  
+      form{
+        input{
+          width: 200px;
+        }
+      }
+  
+      .btn-add{
+        background: none;
+        border: none;
+        outline: none;
+        color: var(--mainColor);
+        border-radius: 10px;
+        box-shadow: 0px 3px 6px 0px var(--shadow);
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+  
+        &:hover{
+          color: var(--white);
+          background: var(--mainColor);
+  
+          i{
+            color: var(--mainColor);
+            background: var(--white);
+          }
+        }
+        
+        span{
+          font-size: 16px;
+        }
+        
+        i{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          font-size: 16px;
+          color: var(--white);
+          background: var(--mainColor);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  
+  .main-management-container{
+    // border: 1px solid green;
+    // height: calc(100% - 91px);
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+  
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    .three-fields-table{
+      tbody{
+        tr{
+          td{
+            &:nth-child(2){
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .six-fields-table{
+      tbody{
+        tr{
+          td{
+            &:nth-child(2){
+              width: 30%;
+            }
+
+            &:nth-child(3){
+              white-space: nowrap;
+            }
+
+            &:nth-child(4){
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+
+    .pembelian{
+      tbody{
+        tr{
+          cursor: pointer;
+
+          td{
+            &:first-child{
+              min-width: 80px;
+
+              span{
+                display: block;
+                text-align: center;
+                padding: 4px 0;
+                border-radius: 10px;
+                font-weight: bold;
+              }
+            }
+
+            &:nth-child(2){
+              width: 60%;
+            }
+
+            &:nth-child(4){
+              white-space: nowrap;
+            }
+
+            &:last-child{
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+
+    .no-data{
+      // border: 1px solid green;
+
+      img{
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .mng-product-container{
+    .main-management-container{
+      .pembelian{
+        thead{
+          tr{
+            th{
+              &:last-child{
+                display: none;
+              }
+            }
+          }
+        }
+
+        tbody{
+          tr{
+            td{
+              &:nth-child(2){
+                width: 100%;
+              }
+              
+              &:last-child{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px){
+  .mng-product-container{
+    .main-management-container{
+      .six-fields-table{
+        thead{
+          tr{
+            th{
+              &:nth-child(5){
+                display: none;
+              }
+            }
+          }
+        }
+
+        tbody{
+          tr{
+            td{
+              &:nth-child(5){
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px){
+  .mng-product-container{
+    .main-management-container{
+      .pembelian{
+        thead{
+          tr{
+            th{
+              &:nth-child(4){
+                display: none;
+              }
+            }
+          }
+        }
+
+        tbody{
+          tr{
+            td{
+              &:nth-child(4){
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .no-data{
+        img{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .mng-product-container{
+    .head-product{
+      .wrapper-action{
+        .btn-add{
+          // background: red;
+          span{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    
+    .main-management-container{
+      .three-fields-table{
+        thead{
+          tr{
+            th{
+              font-size: 14px;
+            }
+          }
+        }
+
+        tbody{
+          tr{
+            td{
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .six-fields-table{
+        thead{
+          tr{
+            th{
+              font-size: 14px;
+
+              &:nth-child(3){
+                display: none;
+              }
+
+              &:nth-child(4){
+                display: none;
+              }
+            }
+          }
+        }
+        
+        tbody{
+          tr{
+            td{
+              font-size: 13px;
+
+              &:nth-child(2){
+                width: 100%;
+              }
+              
+              &:nth-child(3){
+                display: none;
+              }
+
+              &:nth-child(4){
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .mng-product-container{
+    .head-product{
+      align-items: flex-start;
+      flex-direction: column;
+
+      .wrapper-action{
+        width: 100%;
+        margin: 5px 0;
+        justify-content: space-between;
+
+        form{
+          width: calc(100% - 110px);
+          
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .main-management-container{
+      .pembelian{
+        thead{
+          tr{
+            th{
+              &:nth-child(3){
+                display: none;
+              }
+            }
+          }
+        }
+
+        tbody{
+          tr{
+            td{
+              &:nth-child(3){
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

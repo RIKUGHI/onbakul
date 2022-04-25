@@ -1,0 +1,94 @@
+.info-card{
+  // border: 1px solid red;
+  width: 280px;
+  // flex: 1;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px 0px var(--shadow);
+  margin-right: 15px;
+
+  &.skeleton{
+    height: 100px;
+    
+    .wrapper-content{
+      display: none;
+    }
+
+    button{
+      display: none;
+    }
+  }
+
+  .wrapper-content{
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+
+    .icon{
+      // border: 1px solid green;
+      font-size: 40px;
+      margin-right: 10px;
+    }
+
+    .info{
+      // border: 1px solid blue;
+      
+      span{
+        // border: 1px solid red;
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+
+        &.title{
+          font-weight: 500;
+        }
+        
+        &.val{
+          font-weight: bold;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  button{
+    float: right;
+    background: none;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    color: var(--mainColor);
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+/* ---------------------------- Resoponsive Breakpoint ---------------------------- */
+@media (max-width: 1300px){
+  .info-card{
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 950px){
+  .info-card{
+    width: 100%;
+    margin-right: 0;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .info-card{
+    .wrapper-content{
+      .info{
+        span{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

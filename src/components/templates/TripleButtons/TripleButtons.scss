@@ -1,0 +1,37 @@
+.action-triple-btns{
+  // border: 1px solid green;
+  display: flex;
+
+  button{
+    outline: none;
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    font-size: 18px;
+    color: var(--mainColor);
+    box-shadow: 0px 3px 6px 0px var(--shadow);
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:first-child{
+      // background: var(--secondaryWhite);
+    }
+
+    &:nth-child(2){
+      // background: var(--mainColor);
+    }
+
+    &:last-child{
+      // background: var(--warning);
+      margin-right: 0;
+    }
+
+    &:hover{
+      color: var(--white);
+      background: var(--mainColor);
+      box-shadow: 0 0 0 0;
+    }
+  }
+}

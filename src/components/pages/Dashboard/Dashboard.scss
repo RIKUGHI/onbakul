@@ -1,0 +1,55 @@
+.card-container{
+  // border: 1px solid black;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+}
+
+.graph-container{
+  // border: 1px solid black;
+
+  &.skeleton{
+    height: 200px;
+    border-radius: 20px;
+
+    .main-graph-card{
+      display: none;
+    }
+
+    .wrapper-graph{
+      display: none;
+    }
+  }
+
+  .main-graph-card{
+    // border: 1px solid red;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px 0px var(--shadow);
+    margin-bottom: 20px;
+
+    h3{
+      font-size: 20px;
+      color: var(--mainColor);
+      margin-bottom: 10px;
+    }
+  }
+
+  .wrapper-graph{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+}
+
+/* ---------------------------- Resoponsive Breakpoint ---------------------------- */
+@media (max-width: 600px){
+  .graph-container{
+    .main-graph-card{
+      h3{
+        font-size: 18px;
+      }
+    }
+  }
+}

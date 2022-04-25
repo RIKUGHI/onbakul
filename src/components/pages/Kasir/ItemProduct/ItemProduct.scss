@@ -1,0 +1,73 @@
+.item-product{
+  // border: 1px solid blue;
+  background: var(--secondaryWhite);
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 2px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+  
+  .name{
+    // border: 1px solid red;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .wrapper-act{
+    // border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .qty{
+      // border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button{
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        background: var(--mainColor);
+        color: var(--white);
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &.disable{
+          background: #E8E8E8;
+          cursor: auto;
+          pointer-events: none;
+        }
+
+        &.fa-trash-alt{
+          border-radius: 30%;
+          background: red;
+          margin-left: 4px;
+        }
+      }
+      
+      input{
+        outline: none;
+        border: 1px solid #707070;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        width: 40px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0 4px;
+      }
+    }
+    
+    .sub-total{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+    }
+  }
+}

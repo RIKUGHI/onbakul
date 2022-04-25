@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="88" viewBox="0 0 88 88">
+  <defs>
+    <filter id="Rectangle_310" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_186" data-name="Group 186" transform="translate(-36 -42)">
+    <g transform="matrix(1, 0, 0, 1, 36, 42)" filter="url(#Rectangle_310)">
+      <rect id="Rectangle_310-2" data-name="Rectangle 310" width="70" height="70" rx="10" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <path id="Icon_awesome-qrcode" data-name="Icon awesome-qrcode" d="M0,19.393H17.143V2.25H0ZM5.714,7.964h5.714v5.714H5.714ZM22.857,2.25V19.393H40V2.25ZM34.286,13.679H28.571V7.964h5.714ZM0,42.25H17.143V25.107H0ZM5.714,30.821h5.714v5.714H5.714Zm31.429-5.714H40V36.536H31.429V33.679H28.571V42.25H22.857V25.107h8.571v2.857h5.714Zm0,14.286H40V42.25H37.143Zm-5.714,0h2.857V42.25H31.429Z" transform="translate(60 60.75)" fill="#5354d7"/>
+  </g>
+</svg>

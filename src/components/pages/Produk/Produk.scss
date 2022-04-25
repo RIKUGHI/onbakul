@@ -1,0 +1,146 @@
+.product-table{
+  // border: 1px solid red;
+
+  tbody{
+    tr{
+      td{
+        &:first-child{
+          img{
+            display: block;
+            // border: 1px solid red;
+            background: var(--secondaryWhite);
+            border-radius: 10px;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+          }
+        }
+
+        &:nth-child(2){
+          // border: 1px solid black;
+          width: 100%;
+
+          .content{
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+
+            .price{
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(3){
+          // border: 1px solid red;
+          min-width: 140px;
+          max-width: 140px;
+        }
+
+        &:nth-child(4){
+          // border: 1px solid violet;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px){
+  .product-table{
+    thead{
+      tr{
+        th{
+          &:nth-child(5){
+            display: none;
+          }
+        }
+      }
+    }
+
+    tbody{
+      tr{
+        td{
+          &:nth-child(5){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .product-table{
+    thead{
+      tr{
+        th{
+          font-size: 14px;
+
+          &:nth-child(4){
+            display: none;
+          }
+        }
+      }
+    }
+
+    tbody{
+      tr{
+        td{
+          font-size: 13px;
+          
+          &:first-child{
+            img{
+              width: 48px;
+              height: 48px;
+            }
+          }
+
+          &:nth-child(4){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .product-table{
+    thead{
+      tr{
+        th{
+          font-size: 14px;
+
+          &:nth-child(3){
+            display: none;
+          }
+        }
+      }
+    }
+
+    tbody{
+      tr{
+        td{
+          &:nth-child(2){
+            .content{
+              .name{
+                font-size: 13px;
+                font-weight: bold;
+              }
+
+              .price{
+                font-size: 12px;
+                display: block;
+              }
+            }
+          }
+
+          &:nth-child(3){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.outlets-container{
+  // border: 1px solid black;
+  position: relative;
+
+  &.open{
+    .outlet-selected{
+      i{
+        transform: rotate(-180deg);
+      }
+    }
+
+    .list-wrapper{
+      max-height: 200px;
+    }
+  }
+
+  .outlet-selected{
+    // border: 1px solid red;
+    background: var(--secondaryWhite);
+    width: 210px; 
+    height: 48px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+
+    &.skeleton{
+      span{
+        display: none;
+      }
+
+      i{
+        display: none;
+      }
+    }
+    
+    span{
+      // border: 1px solid red;
+      pointer-events: none;
+    }
+
+    i{
+      pointer-events: none;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  .list-wrapper{
+    // border: 1px solid brown;
+    position: absolute;
+    margin-top: 4px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0 4px;
+    background: var(--secondaryWhite);
+    box-shadow: 0 8px 15px 0 var(--shadow);
+    border-radius: 10px;
+    max-height: 0;
+    transition: 0.3s ease-in-out;
+    overflow-y: hidden;
+
+    input{
+      width: 100%;
+      display: block;
+      outline: none;
+      border: 2px solid transparent;
+      background: var(--white);
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 4px 6px;
+      margin: 5px 0;
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
+
+      &:focus{
+        border: 2px solid var(--mainColor);
+      }
+    }
+
+    .list-container{
+      // border: 1px solid black;
+      list-style: none;
+      max-height: 160px;
+      
+      &.scroll{
+        overflow-y: scroll;
+        // scroll-behavior: smooth;
+
+        &::-webkit-scrollbar{
+          width: 8px;
+        }
+  
+        &::-webkit-scrollbar-thumb{
+          background: #b8b8b8;
+          border-radius: 5px;
+        }
+      }
+
+      li{
+        // border: 1px solid blue;
+        font-size: 16px;
+        padding: 6px 8px;
+        cursor: pointer;
+
+        &:hover{
+          background: var(--mainColor);
+          color: var(--white);
+          border-radius: 10px;
+        }
+        
+        &:focus{
+          background: var(--mainColor);
+          color: var(--white);
+          border-radius: 8px;
+          outline: none;
+        }
+
+        &.active{
+          background: var(--mainColor);
+          border-radius: 8px;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------- Resoponsive Breakpoint ---------------------------- */
+@media (max-width: 450px) {
+  .outlets-container{
+    width: 100%;
+    .outlet-selected{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.account-container{
+  // border: 1px solid black;
+  display: flex;
+  
+  img{
+    // border: 1px solid black;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 25px;
+  }
+
+  .info-container{
+    // border: 1px solid red;
+    flex: 1;
+    display: flex;
+
+    .info{
+      // border: 1px solid blue;
+      margin-right: 25px;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      .wrp{
+        // border: 1px solid blue;
+
+        .data-account{
+          // border: 1px solid red;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+  
+          &:last-child{
+            margin-bottom: 0;
+          }
+  
+          label{
+            // border: 1px solid red;
+            font-weight: bold;
+            margin-bottom: 2px;
+          }
+  
+          p{
+            // border: 1px solid red;
+          }
+        }
+      }
+
+      button{
+        width: 100px;
+        height: 35px;
+        outline: none;
+        border: none;
+        background: var(--mainColor);
+        color: var(--white);
+        border-radius: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.2px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .account-container{
+    // border: 1px solid black;
+    flex-direction: column;
+
+    img{
+      margin: auto auto 25px auto;
+    }
+
+    .info-container{
+      .info{
+        &:last-child{
+          .wrp{
+            // background: black;
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .account-container{
+    img{
+      width: 150px;
+      height: 150px;
+    }
+
+    .info-container{
+      .info{
+        .wrp{
+          .data-account{
+            // background: red;
+            font-size: 14px;
+          }
+        }
+
+        button{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .account-container{
+    .info-container{
+      flex-direction: column;
+
+      .info{
+        // border: 1px solid red;
+        margin-right: 0;
+        align-items: flex-start;
+        margin-bottom: 10px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        .wrp{
+          // border: 1px solid blue;
+          width: 100%;
+        }
+
+        button{
+          width: 150px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .account-container{
+    .info-container{
+      .info{
+        button{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

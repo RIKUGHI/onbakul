@@ -1,0 +1,97 @@
+:root{
+  --mainBackground: #D8D6F6;
+
+  --mainColor: #5354D7;
+  --secondaryColor: #453CCE;
+
+  --halfMainColor: rgba(83, 83, 215, 0.150);
+
+  --white: #ffffff;
+  --secondaryWhite: #F2F4F8;
+  --thirdryWhite: #e6e8ee;
+
+  --warning: #FF0000;
+  --warningBg: rgba(255, 0, 0, 0.100);
+  --success: #00D316;
+  --successBg: rgba(0, 255, 26, 0.250);
+
+  --shadow: rgba(0, 0, 0, 0.16);
+}
+
+body::-webkit-scrollbar{
+  width: 8px;
+} 
+
+body::-webkit-scrollbar-thumb{
+  background: var(--mainColor);
+  border-radius: 5px;
+}
+
+.App{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--mainBackground);
+}
+
+.App.netral{
+  position: relative;
+  background: var(--white );
+}
+
+.skeleton{
+  opacity: .7;
+  pointer-events: none;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th{
+  padding: 4px;
+  border-bottom: 1px solid var(--mainColor);
+}
+
+td{
+  padding: 4px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+tbody tr:hover{
+  background: var(--secondaryWhite);
+}
+
+.lunas{
+  background: var(--successBg);
+  color: var(--success);
+}
+
+.hutang{
+  background: var(--warningBg);
+  color: var(--warning);
+}
+
+.disable{
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgb(217, 217, 217);
+  }
+
+  100% {
+    background-color: rgb(172, 172, 172);
+  }
+}

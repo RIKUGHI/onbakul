@@ -1,0 +1,36 @@
+.product-container{
+  // border: 1px solid red;
+  width: calc(100% - 291px);
+  display: flex;
+  flex-direction: column;
+
+  .product-card-container{
+    // border: 1px solid green;
+    display: flex;
+    flex-flow: row wrap;
+    // height: calc(100% - 90px);
+    flex: 1;
+    overflow-y: scroll;
+    margin: 8px 0;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    &.data{
+      align-content: flex-start;
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .product-container{
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px){
+  .product-card-container{
+    justify-content: center;
+  }
+}

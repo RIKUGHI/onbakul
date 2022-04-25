@@ -1,0 +1,35 @@
+.loading{
+  // border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .load{
+    border: 10px solid var(--white);
+    border-top: 10px solid var(--mainColor);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    animation: spin 1.4s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px){
+  .loading{
+    .load{
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="88" viewBox="0 0 88 88">
+  <defs>
+    <filter id="Rectangle_308" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_185" data-name="Group 185" transform="translate(-36 -41)">
+    <g transform="matrix(1, 0, 0, 1, 36, 41)" filter="url(#Rectangle_308)">
+      <rect id="Rectangle_308-2" data-name="Rectangle 308" width="70" height="70" rx="10" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <path id="Icon_awesome-receipt" data-name="Icon awesome-receipt" d="M37.333.271l-4,3.791L27.667.271a1.968,1.968,0,0,0-2,0L20,4.062,14.333.271a1.968,1.968,0,0,0-2,0L6.667,4.062l-4-3.791C1.562-.4,0,.237,0,1.354V41.975c0,1.117,1.562,1.752,2.667,1.083l4-3.791,5.667,3.791a1.968,1.968,0,0,0,2,0L20,39.267l5.667,3.791a1.968,1.968,0,0,0,2,0l5.667-3.791,4,3.791c1.094.669,2.667.034,2.667-1.083V1.354C40,.237,38.438-.4,37.333.271Zm-4,30.195a.77.77,0,0,1-.833.677H7.5a.77.77,0,0,1-.833-.677V29.112a.77.77,0,0,1,.833-.677h25a.77.77,0,0,1,.833.677Zm0-8.124a.77.77,0,0,1-.833.677H7.5a.77.77,0,0,1-.833-.677V20.988a.77.77,0,0,1,.833-.677h25a.77.77,0,0,1,.833.677Zm0-8.124a.77.77,0,0,1-.833.677H7.5a.77.77,0,0,1-.833-.677V12.864a.77.77,0,0,1,.833-.677h25a.77.77,0,0,1,.833.677Z" transform="translate(60 60.335)" fill="#5354d7"/>
+  </g>
+</svg>

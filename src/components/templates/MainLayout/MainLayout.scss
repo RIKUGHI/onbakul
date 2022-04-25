@@ -1,0 +1,43 @@
+main{
+  position: fixed;
+  top: 0;
+  left: 260px;
+  right: 0;
+  bottom: 0;
+  // border: 1px solid black;
+  transition: 0.5s ease-in-out;
+  
+  &.open{
+    left: 70px;
+  } 
+
+  .main-container{
+    // border: 1px solid brown;
+    height: calc(100% - 70px);
+    border-radius: 20px 0 0 0;
+    background: var(--white);
+    padding: 25px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+
+/* ---------------------------- Resoponsive Breakpoint ---------------------------- */
+@media (max-width: 768px){
+  main{
+    left: 0;
+  }
+}
+
+@media (max-width: 600px){
+  main{
+    .main-container{
+      height: calc(100% - 46px);
+      padding: 15px;
+      border-radius: 0px;
+    }
+  }
+}

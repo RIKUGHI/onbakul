@@ -1,0 +1,40 @@
+.date-list-container{
+  // border: 1px solid green;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  .date{
+    // border: 1px solid red;
+    background: var(--secondaryWhite);
+    width: 144px; 
+    height: 48px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    // margin-right: 10px;
+
+    &.skeleton{
+      span{
+        display: none;
+      }
+      
+      i{
+        display: none;
+      }
+    }
+  }
+
+
+}
+
+/* ---------------------------- Resoponsive Breakpoint ---------------------------- */
+@media (max-width: 450px) {
+  .date-list-container{
+    .date{
+      // width: 100%;
+      // display: none;
+    }
+  }
+}

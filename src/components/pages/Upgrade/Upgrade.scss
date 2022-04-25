@@ -1,0 +1,225 @@
+.unlocked-feature{
+  // border: 1px solid black;
+  list-style: none;
+  width: 100%;
+  margin-top: 50px;
+
+  li{
+
+    i{
+      font-size: 20px;
+      margin-right: 10px;
+      color: var(--success);
+    }
+
+    span{
+      font-size: 14px;
+      font-weight: bold;
+      color: #272727;
+    }
+  }
+}
+.upgrade-title{
+  color: var(--mainColor);
+  font-size: 20px;
+  font-weight: bold;
+  // border: 1px solid black;
+  display: block;
+  text-align: center;
+}
+
+.container-card-upgrade{
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  .wrapper-upgrade-card{
+    padding: 0 12px;
+
+    &:last-child{
+      .upgrade-card{
+        .upgrade-logo{
+          i{
+            color: var(--success);
+          }
+        }
+        
+        label{
+          color: var(--success);
+        }
+        
+        ul{
+          li{
+            i{
+              color: var(--success);
+            }
+          }
+        }
+      }
+    }
+
+    .upgrade-card{
+      // border: 1px solid blue;
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 46px 24px 24px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px 0px var(--shadow);
+      position: relative;
+
+      .upgrade-logo{
+        // border: 1px solid salmon;
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        top: -50px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 6px -1px var(--shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i{
+          // border: 1px solid black;
+          font-size: 40px;
+        }
+      }
+
+      label{
+        // border: 1px solid black;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      span{
+        font-size: 16px;
+        // border: 1px solid black;
+        margin-bottom: 15px;
+      }
+
+      button{
+        margin-bottom: 15px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        background: var(--success);
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      
+      p{
+        // border: 1px solid black;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      ul{
+        // border: 1px solid black;
+        list-style: none;
+        width: 100%;
+
+        li{
+
+          i{
+            font-size: 12px;
+            margin-right: 10px;
+          }
+
+          span{
+            font-size: 14px;
+            font-weight: bold;
+            color: #272727;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container-table-upgrade{
+  // border: 1px solid red;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .upgrade-table{
+    width: 1100px;
+    margin: auto;
+  
+    tbody{
+      tr{
+        &.status-upgrade{
+          td{
+            &:first-child{
+              color: #272727;
+            }
+  
+            &:nth-child(2), &:last-child{
+              width: 25%;
+              text-align: center;
+              font-weight: bold;
+              font-size: 16px;
+            }
+  
+            i{
+              &.fa-check{
+                color: var(--success);
+              }
+  
+              &.fa-times{
+                color: #bbbbbb;
+              }
+            }
+          }
+        }
+  
+        td{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px){
+  .container-card-upgrade{
+    justify-content: flex-start;
+  }
+
+  .container-table-upgrade{
+    .upgrade-table{
+      tbody{
+        tr{
+          &.status-upgrade{
+            td{
+              &:nth-child(2), &:last-child{
+                font-size: 14px;
+              }
+            }
+          }
+
+          td{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

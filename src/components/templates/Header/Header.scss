@@ -1,0 +1,234 @@
+header{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-radius: 0 0 0 20px;
+  margin-bottom: 10px;
+  padding: 0 25px;
+  // border: 1px solid black;
+
+  .wrapper-title{
+    // border: 1px solid blue;
+    display: flex;
+    align-items: center;
+
+    .menu-toggle{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 20px;
+      cursor: pointer;
+  
+      &.active{
+        span:nth-child(1){
+          background-color: var(--secondaryColor);
+          transform: rotate(45deg) translate(-1px, -1px);
+        }
+  
+        span:nth-child(2){
+          opacity: 0;
+          transform: scale(0);
+        }
+  
+        span:nth-child(3){
+          background-color: var(--secondaryColor);
+          transform: rotate(-45deg) translate(-1px, 0);
+        }
+      }
+  
+      span{
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--secondaryColor);
+        border-radius: 3px;
+        transition: all 0.5s;
+  
+        &:nth-child(1){
+          transform-origin: 0 0;
+        }
+  
+        &:nth-child(3){
+          transform-origin: 0 100%;
+        }
+      }
+    }
+  
+    .title{
+      margin-left: 25px;
+      color: var(--secondaryColor);
+    }
+  }
+
+  .wrapper-icons{
+    // border: 1px solid red;
+    // width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+      position: relative;
+      background: none;
+      outline: none;
+      border: none;
+      // border: 1px solid green;
+      font-size: 24px;
+      color: var(--mainColor);
+      cursor: pointer;
+      margin-right: 10px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      span{
+        // border: 1px solid rgb(0, 0, 255);
+        background: var(--warning);
+        color: var(--white);
+        top: -2px;
+        right: -8px;
+        position: absolute;
+        font-size: 14px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .notif-container{
+        position: absolute;
+        top: 42px;
+        right: 0;
+        z-index: 1;
+        // border: 1px solid black;
+        background: var(--white);
+        box-shadow: 0px 3px 20px 0px var(--shadow);
+        width: 350px;
+        max-height: 362px;
+        padding: 15px;
+        border-radius: 10px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar{
+          width: 8px;
+        } 
+        
+        &::-webkit-scrollbar-thumb{
+          background: var(--mainColor);
+          border-radius: 5px;
+        }
+
+        h3{
+          // border: 1px solid black;
+          font-size: 20px;
+          text-align: start;
+          margin-bottom: 10px;
+        }
+
+        .notif-card{
+          // border: 1px solid red;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          box-shadow: 0px 3px 6px 0px var(--shadow);
+
+          &:last-child{
+            margin-bottom: 0;
+          }
+
+          p{
+            // border: 1px solid black;
+            text-align: start;
+            font-size: 14px;
+            font-weight: normal;
+            color: black;
+            margin-bottom: 5px;
+
+            &:last-child{
+              margin-bottom: 0;
+            }
+
+            strong{
+              &:last-child{
+                color: var(--warning);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+/* ---------------------------- Resoponsive Breakpoint ---------------------------- */
+@media (max-width: 800px){
+  header{
+    .wrapper-icons{
+      button{
+        &:first-child{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header{
+    height: 45px;
+    padding: 0 15px;
+    border-radius: 0px;
+    margin-bottom: 1px;
+
+    .wrapper-title{
+      .menu-toggle{ 
+        height: 15px;
+
+        span{
+          height: 2px;
+        }
+      }
+
+      .title{
+        margin-left: 15px;
+        font-size: 20px;
+      }
+    }
+
+    .wrapper-icons{
+      // width: 45px;
+
+      button{
+        font-size: 20px;
+
+        .notif-container{
+          position: fixed;
+          top: 45px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 95%;
+
+          h3{
+            font-size: 18px;
+          }
+
+          .notif-card{
+            p{
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .outlets-container{
+        display: none;
+      }
+    }
+  }
+}
