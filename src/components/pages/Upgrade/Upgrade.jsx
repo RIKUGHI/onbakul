@@ -70,7 +70,7 @@ class Upgrade extends Component {
         isLoadingPage: false
       }, () => {
         let endDate = new Date(res.data.result.end).getTime()
-
+        console.log(endDate);
         let countDownDate = setInterval(() => {
           let now = new Date();
           let miliTime = now.getTime()

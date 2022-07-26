@@ -1,4 +1,6 @@
+import axios from 'axios'
 import { useEffect, useRef, useState } from 'react'
+import util from '../../../../util'
 import './ItemProduct.scss'
 
 export default function ItemProduct(props) {
@@ -29,26 +31,50 @@ export default function ItemProduct(props) {
         }
       }
 
+      const {idOwner, idOutlet, isVariant, id} = props
+
       btnPlus.current.onclick = () => {
         setQty(qty + 1)
         btnMinus.current.classList.remove('disable')
         props.reloadTotal()
+        addQuantity(idOwner, idOutlet, isVariant ? 1 : 0, id, qty + 1);
       }
   
       btnMinus.current.onclick = e => {
         if (qty !== 1) {
           setQty(qty - 1)
+          addQuantity(idOwner, idOutlet, isVariant ? 1 : 0, id, qty - 1);
         }
         
         if (qty <= 2) {
           setQty(1)
           e.target.classList.add('disable')
+          addQuantity(idOwner, idOutlet, isVariant ? 1 : 0, id, 1);
         }
         
         props.reloadTotal()
       }
     }
   })
+
+  const addQuantity = (id_owner, id_outlet, is_variant, id_product, qty) => {
+    const form = new FormData()
+    form.append('id_owner', id_owner)
+    form.append('id_outlet', id_outlet)
+    form.append('is_variant', is_variant)
+    form.append('id_product', id_product)
+    form.append('qty', qty)
+
+    axios.post(util.server_url+'cashier/addQuantity', form)
+    .then(res => {
+      if (res.data.response_code === 200) {
+        // console.log('success', res.data.result.message)
+      } else {
+        console.log('warning', res.data.result.message)
+      }
+    })
+    .catch(err => console.log(err))
+  }
   
   if (props.loading) return <div className="item-product skeleton"></div>
 

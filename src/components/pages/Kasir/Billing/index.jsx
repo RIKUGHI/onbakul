@@ -212,6 +212,8 @@ export default function Billing({p, isLoading, data, handleShowNotif, onItemDele
           ) : data === null ? <img src={EmptyCart} alt="" /> : (
             data.result.map((d, i) => <ItemProduct
                                         key={d.id_product}
+                                        idOwner={d.id_owner}
+                                        idOutlet={d.id_outlet}
                                         id={d.id_product}
                                         isVariant={d.is_variant}
                                         name={d.product_name}

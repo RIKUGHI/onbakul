@@ -12,7 +12,7 @@ export default function InfoCard(props) {
           <span className="title">{props.title}</span>
         </div>
       </div>
-      {/* <button>Lihat Detail</button> */}
+      {props.onClick && <button onClick={props.onClick}>Lihat Detail</button>} 
     </div>
   )
 }
