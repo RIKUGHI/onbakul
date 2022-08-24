@@ -1,7 +1,7 @@
 {
   "name": "onbakul",
   "version": "0.1.0",
-  "homepage": "http://onbakul.gallery-umkm.id/",
+  "homepage": "https://onbakul.netlify.app/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
