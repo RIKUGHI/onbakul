@@ -1,7 +1,8 @@
 // http://service.onbakul.gallery-umkm.id/
 // http://localhost/onbakul-server/
+// https://watered-down-anthem.000webhostapp.com/
 export default {
-  server_url: 'http://localhost/onbakul-server/',
+  server_url: 'https://watered-down-anthem.000webhostapp.com/',
   months: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
   numericOnly: e => {
     const ch = String.fromCharCode(e.which)
